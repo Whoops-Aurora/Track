@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const mongoose = require('mongoose');  
 const uri = process.env.ATLAS_URI;  //database uri
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });  //connect to database
+mongoose.connect(uri, {useNewUrlParser: true});  //connect to database
 const connection = mongoose.connection;
 connection.once('open', () => {
     console.log("MongoDB database connection established successfully")
