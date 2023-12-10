@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import Exercises from './components/Exercises.component.js';
 import CreateExercises from './components/CreateExercises.component.js';
+import EditExercises from './components/EditExercises.component.js';
+import CreateUsers from './components/CreateUsers.component.js';
 import Navbar from "./components/Navbar.js"
 function App() {
   return (
@@ -15,9 +17,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Exercises />} />
-        {/* <Route path="/edit/:id" element={<EditExercises />} /> */}
+        <Route path="/edit/:id" element={<EditExercises />} />
         <Route path="/create" element={<CreateExercises />} />
-        {/* <Route path="/user" element={<CreateUsers />} /> */}
+        <Route path="/user" element={<CreateUsers />} />
         </Routes>
       </Router>
     </>
